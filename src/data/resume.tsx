@@ -132,7 +132,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/gui_home.png",
+      image: "/revclassify.png",
       video:
         "",
     },
