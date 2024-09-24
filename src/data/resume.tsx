@@ -164,11 +164,16 @@ export const DATA = {
       dates: "Sep 2023",
       active: true,
       description:
-        "A simple to-do list web app built with React.js, allowing users to add, edit, and delete tasks. Todos are saved locally on the device for persistence. The app is responsive and deployed on Netlify for easy access.",
+        "A full-stack to-do list web app built with React.js and a Node.js backend, featuring CRUD operations and MongoDB for data storage. Users can add, edit, and delete tasks, with todos saved in the database for persistence. The application includes authentication and authorization using JWT tokens, ensuring secure access. It is responsive and offers a seamless user experience.",
       technologies: [
+        "HTML & CSS",
         "Javascript",
         "React.js",
-        "HTML & CSS"
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Vite",
+        "JWT"
       ],
       links: [
         // {
