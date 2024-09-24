@@ -171,18 +171,18 @@ export const DATA = {
         "HTML & CSS"
       ],
       links: [
-        {
-          type: "Website",
-          href: "https://mehdi-todo-list.netlify.app/",
-          icon: <Icons.globe className="size-3" />,
-        },
+        // {
+        //   type: "Website",
+        //   href: "https://mehdi-todo-list.netlify.app/",
+        //   icon: <Icons.globe className="size-3" />,
+        // },
         {
           type: "Source",
           href: "https://github.com/mehdi1514/TodoList",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://github.com/mehdi1514/TodoList/raw/main/screenshot.png",
+      image: "/todolistpostforlio.png",
       video: "",
     },
     {
