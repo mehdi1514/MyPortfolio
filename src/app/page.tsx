@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { TechStackCloud } from "@/components/ui/tech_stack_cloud";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -97,11 +98,21 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
+      <section id="tech-stack-cloud">
+        <div className="flex min-h-0 flex-col">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
+          <div className="relative flex items-center justify-center">
+            <TechStackCloud></TechStackCloud>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          {/* <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade> */}
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
@@ -206,7 +217,7 @@ export default function Page() {
                   Upskilling and Teaching Tech
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in VJTI, I was a part of two communities that were mainly focused on learning new skills and teaching others the same. 
+                  During my time in VJTI, I was a part of two communities that were mainly focused on learning new skills and teaching others the same.
                 </p>
               </div>
             </div>

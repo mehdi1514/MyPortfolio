@@ -13,25 +13,28 @@ export const DATA = {
     "I recently did my MSc in Advanced Computer Science from the University of Manchester and a Computer Engineering grad from VJTI Mumbai. I've honed my skills as a Software Developer Intern at Barclays and Associate Developer at SAP Labs India—crafting solutions with the latest tech. I'm all about building sleek web apps, powerful mobile experiences, and diving into the world of AI. Teaching is my jam too—I loved guiding fellow students during my time at VJTI. Let’s connect and create something extraordinary!",
   avatarUrl: "/me1.jpeg",
   skills: [
-    "Python", 
-    "Javascript", 
-    "Typescript", 
-    "C++", 
-    "Java", 
-    "Dart", 
-    "React.js", 
-    "Node.js", 
+    "Python",
+    "Javascript",
+    "Typescript",
+    "C++",
+    "Java",
+    "Dart",
+    "React.js",
+    "Node.js",
+    "Angular",
     "Flutter",
     "Firebase",
-    "MongoDB",
-    "MySQL",
+    "SQL",
+    "NoSQL",
+    "Docker",
+    "Kafka",
+    "Redis",
     "Numpy",
     "Pandas",
     "Scikit-Learn",
     "PyTorch",
     "Keras",
-    "Docker",
-    "Kafka"
+    "Vercel"
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -110,6 +113,32 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Scalable Real-Time Chat App",
+      href: "",
+      dates: "Oct 2024 - Present",
+      active: true,
+      description:
+        "A scalable real-time chat application built with NextAuth.js for user authentication, Redis Pub/Sub for real-time messaging, Kafka for message processing, and PostgreSQL for persistent data storage.",
+      technologies: [
+        "Next.js",
+        "Node.js",
+        "Socket.io",
+        "Redis",
+        "Kafka",
+        "PostgreSQL"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/mehdi1514/Scalable-chat-app/",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://github.com/mehdi1514/Scalable-chat-app/raw/main/app_screenshots/chatapp.png",
+      video:
+        "",
+    },
     {
       title: "App Review Classification Using PLMs",
       href: "",
