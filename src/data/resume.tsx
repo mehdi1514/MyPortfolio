@@ -70,6 +70,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Alteam",
+      href: "",
+      badges: [],
+      location: "Manchester, UK",
+      title: "Full Stack and AI Intern",
+      logoUrl: "/alteamio_logo.jpeg",
+      start: "Dec 2024",
+      end: "Present",
+      description:
+        "Developed and optimized a semantic search feature using LangChain and OpenAI's GPT-4 model, improving user matches by 25%. Enhanced platform performance with React.js, Node.js, and Astro, while optimizing database infrastructure with Postgres and Amazon RDS to reduce query latency by 30%. Streamlined build processes with Bun, cutting build times by 25%, and adhered to Agile and CI/CD practices for efficient feature delivery.",
+    },
+    {
       company: "SAP Labs India",
       href: "",
       badges: [],
