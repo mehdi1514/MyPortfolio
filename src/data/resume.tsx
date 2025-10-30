@@ -8,9 +8,9 @@ export const DATA = {
   location: "Manchester, UK",
   locationLink: "https://www.google.com/maps/place/Manchester/",
   description:
-    "Experienced Software Engineer and AI Enthusiast. Love building things with web, mobile app and AI tools and frameworks. Very active on LinkedIn.",
+    "Experienced Full Stack Engineer with experience building AI workflows. Love building things with web, mobile app and AI tools and frameworks. Very active on LinkedIn.",
   summary:
-    "I recently did my MSc in Advanced Computer Science from the University of Manchester and a Computer Engineering grad from VJTI Mumbai. I've honed my skills as a Software Developer Intern at Barclays and Associate Developer at SAP Labs India—crafting solutions with the latest tech. I'm all about building sleek web apps, powerful mobile experiences, and diving into the world of AI. Teaching is my jam too—I loved guiding fellow students during my time at VJTI. Let’s connect and create something extraordinary!",
+    "I did my MSc in Advanced Computer Science from the University of Manchester. I've honed my skills as a Frontend Engineer Intern at Barclays and Backend Engineer at SAP Labs India — crafting solutions with the latest tech. I'm all about building full stack apps, powerful user experiences, and diving into the world of AI. Teaching is my jam too — I loved guiding fellow students during my time at VJTI. Let's connect and create something extraordinary!",
   avatarUrl: "/me1.jpeg",
   skills: [
     "Python",
@@ -74,12 +74,12 @@ export const DATA = {
       href: "",
       badges: [],
       location: "Manchester, UK",
-      title: "Full Stack and AI Intern",
+      title: "Full Stack AI Engineer",
       logoUrl: "/alteamio_logo.jpeg",
       start: "Dec 2024",
       end: "Present",
       description:
-        "Developed and optimized a semantic search feature using LangChain and OpenAI's GPT-4 model, improving user matches by 25%. Enhanced platform performance with React.js, Node.js, and Astro, while optimizing database infrastructure with Postgres and Amazon RDS to reduce query latency by 30%. Streamlined build processes with Bun, cutting build times by 25%, and adhered to Agile and CI/CD practices for efficient feature delivery.",
+        "Led the end-to-end development of a full stack app made with Next.js, Hono (Node.js) and Postgres to build a product to help the company find the right talents for clients in minutes. Designed and developed an AI-powered talent-matching pipeline to find the best talents for clients and deploy teams in just 48 hours, reducing the time taken to hire by 40%.",
     },
     {
       company: "SAP Labs India",
@@ -128,7 +128,7 @@ export const DATA = {
     {
       title: "Scalable Real-Time Chat App",
       href: "",
-      dates: "Oct 2024 - Present",
+      dates: "Oct 2024 - Dec 2024",
       active: true,
       description:
         "A scalable real-time chat application built with NextAuth.js for user authentication, Redis Pub/Sub for real-time messaging, Kafka for message processing, and PostgreSQL for persistent data storage.",
@@ -148,6 +148,32 @@ export const DATA = {
         },
       ],
       image: "https://github.com/mehdi1514/Scalable-chat-app/raw/main/app_screenshots/chatapp.png",
+      video:
+        "",
+    },
+    {
+      title: "StudyLM - Create Study Notes with AI",
+      href: "",
+      dates: "Sept 2024 - Oct 2024",
+      active: true,
+      description:
+        "This project is an AI-powered note-taking application built with Next.js that allows users to create, edit, and organize notes effortlessly. It integrates Langchain and Gemini to provide intelligent summaries and insights, while Clerk ensures secure authentication and Convex powers a scalable backend. Designed with Tailwind CSS, the app offers a modern, responsive, and seamless user experience across devices.",
+      technologies: [
+        "Next.js",
+        "Convex",
+        "Clerk",
+        "LangChain",
+        "Gemnini",
+        "Tailwind CSS"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/mehdi1514/StudyLM?tab=readme-ov-file",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://github.com/mehdi1514/StudyLM/raw/main/screenshots/ai-result.png",
       video:
         "",
     },
