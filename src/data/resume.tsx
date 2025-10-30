@@ -86,7 +86,7 @@ export const DATA = {
       href: "",
       badges: [],
       location: "Bengaluru",
-      title: "Backend Engineer Developer",
+      title: "Backend Engineer",
       logoUrl: "/sap_logo.png",
       start: "Jul 2022",
       end: "Aug 2023",
