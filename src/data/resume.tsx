@@ -2,38 +2,45 @@ import { Icons } from "@/components/icons";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Mehdi",
+  name: "Mehdi Patel",
   initials: "MM",
-  url: "https://dillion.io",
-  location: "Manchester, UK",
+  url: "https://www.linkedin.com/in/moahmmedmehdi/",
+  location: "Manchester, England, United Kingdom",
   locationLink: "https://www.google.com/maps/place/Manchester/",
   description:
-    "Experienced Full Stack Engineer with experience building AI workflows. Love building things with web, mobile app and AI tools and frameworks. Very active on LinkedIn.",
+    "I am an AI Engineer focused on architecting and building backends for AI agents and RAG systems. I turn demo pilots into production AI applications.",
   summary:
-    "I did my MSc in Advanced Computer Science from the University of Manchester. I've honed my skills as a Frontend Engineer Intern at Barclays and Backend Engineer at SAP Labs India — crafting solutions with the latest tech. I'm all about building full stack apps, powerful user experiences, and diving into the world of AI. Teaching is my jam too — I loved guiding fellow students during my time at VJTI. Let's connect and create something extraordinary!",
+    "I build backend systems that make AI products work in production: RAG pipelines, AI agents, LLM integrations, and the APIs that connect them. At Alteam I shipped a semantic search feature with LangChain and PGVector that cut talent search time by 40% and improved match accuracy by 25%. My core stack is TypeScript, Node.js, Python, and FastAPI, with hands-on experience in RAG systems, agent orchestration, and vector databases - plus fullstack capability in React and Next.js.",
   avatarUrl: "/me1.jpeg",
   skills: [
+    "Retrieval-Augmented Generation (RAG)",
+    "LangChain",
+    "Agent Orchestration",
+    "TypeScript",
     "Python",
-    "Javascript",
-    "Typescript",
-    "C++",
-    "Java",
-    "Dart",
-    "React.js",
     "Node.js",
-    "Angular",
-    "Flutter",
-    "Firebase",
-    "SQL",
-    "NoSQL",
-    "Docker",
+    "FastAPI",
+    "Next.js",
+    "React.js",
+    "PostgreSQL",
+    "PGVector",
     "Kafka",
     "Redis",
-    "Numpy",
-    "Pandas",
-    "Scikit-Learn",
+    "Docker",
+    "SQL",
+    "NoSQL",
+    "spaCy",
     "PyTorch",
     "Keras",
+    "Pandas",
+    "Numpy",
+    "Scikit-Learn",
+    "Flutter",
+    "Firebase",
+    "Java",
+    "Spring Boot",
+    "Angular",
+    "Dart",
     "Vercel"
   ],
   navbar: [
@@ -73,13 +80,13 @@ export const DATA = {
       company: "Alteam",
       href: "",
       badges: [],
-      location: "Manchester, UK",
-      title: "Full Stack AI Engineer",
+      location: "London Area, United Kingdom",
+      title: "AI Engineer (Full Stack)",
       logoUrl: "/alteamio_logo.jpeg",
       start: "Dec 2024",
       end: "Present",
       description:
-        "Led the end-to-end development of a full stack app made with Next.js, Hono (Node.js) and Postgres to build a product to help the company find the right talents for clients in minutes. Designed and developed an AI-powered talent-matching pipeline to find the best talents for clients and deploy teams in just 48 hours, reducing the time taken to hire by 40%.",
+        "Engineered an AI-powered semantic search feature with LangChain, PostgreSQL, and PGVector that reduced talent search time by 40% and improved talent match accuracy by 25%. Developed a RAG system and backend APIs for talent matching, and shipped production-ready features across React, Next.js, Node.js, and Hono within a robust CI/CD pipeline.",
     },
     {
       company: "SAP Labs India",
@@ -91,19 +98,19 @@ export const DATA = {
       start: "Jul 2022",
       end: "Aug 2023",
       description:
-        "Enhanced multi-tenant cloud service with Extensibility feature, improving master data integration. Implemented RESTful APIs and Kafka integration, boosting system scalability. Expanded SAP ODM functionality, increasing system flexibility by 40%. Developed unit tests achieving 90% code coverage, reducing post-deployment issues by 30%. Maintained CI/CD practices using Docker, Jenkins, and GitHub, ensuring consistent development and deployment environments.",
+        "Worked on an extensibility feature for a multi-tenant cloud service using SAP One Domain Model (ODM), building RESTful APIs and Kafka integrations to improve data integration and scalability. Enhanced key entity types to increase system flexibility by 40%, implemented caching to cut API response times by 15%, and wrote over 30 unit tests with Jest, JUnit, and Mockito to reach around 90% coverage. Delivered over 30 successful deployments using Docker, Jenkins, and GitHub in a distributed, production environment.",
     },
     {
       company: "Barclays",
       badges: [],
       href: "",
       location: "WFH",
-      title: "Frontend Engineer Intern",
+      title: "Frontend Engineer",
       logoUrl: "/barclays_logo.png",
       start: "Jun 2021",
       end: "Aug 2021",
       description:
-        "Developed an enterprise-level client risk assessment system for loan approvals using Angular, optimizing API data fetching to reduce load times by 25%. Collaborated on integration issue resolution, decreasing bugs by 15%, and improved creditworthiness assessment accuracy by 10%. Managed version control with Git and GitHub, contributing to over 50 successful pull requests.",
+        "Developed responsive user interfaces for an enterprise-level client risk assessment system using Angular, enhancing the loan approval process. Optimized API data retrieval to reduce page load times by 25% and improve system performance, collaborated with senior developers to resolve integration issues, decreasing bugs by 15%, and contributed to enhancing creditworthiness assessment features that increased loan approval accuracy by 10%. Gained hands-on experience with Angular, Node.js, and Agile methodologies in a professional development environment.",
     },
   ],
   education: [
@@ -131,7 +138,7 @@ export const DATA = {
       dates: "Oct 2024 - Dec 2024",
       active: true,
       description:
-        "A scalable real-time chat application built with NextAuth.js for user authentication, Redis Pub/Sub for real-time messaging, Kafka for message processing, and PostgreSQL for persistent data storage.",
+        "A scalable real-time chat system with a Node.js backend, using Redis Pub/Sub for real-time messaging, Kafka for message processing, PostgreSQL for durable storage, and NextAuth.js for secure authentication.",
       technologies: [
         "Next.js",
         "Node.js",
@@ -157,13 +164,13 @@ export const DATA = {
       dates: "Sept 2024 - Oct 2024",
       active: true,
       description:
-        "This project is an AI-powered note-taking application built with Next.js that allows users to create, edit, and organize notes effortlessly. It integrates Langchain and Gemini to provide intelligent summaries and insights, while Clerk ensures secure authentication and Convex powers a scalable backend. Designed with Tailwind CSS, the app offers a modern, responsive, and seamless user experience across devices.",
+        "An AI-powered note-taking application built with Next.js where users can create, edit, and organize notes, backed by a Convex data layer. It integrates LangChain and Gemini to generate summaries and insights from notes, while Clerk provides secure authentication and Tailwind CSS delivers a modern, responsive UI.",
       technologies: [
         "Next.js",
         "Convex",
         "Clerk",
         "LangChain",
-        "Gemnini",
+        "Gemini",
         "Tailwind CSS"
       ],
       links: [
@@ -183,9 +190,9 @@ export const DATA = {
       dates: "Feb 2024 - Sep 2024",
       active: true,
       description:
-        "This project classifies app reviews using fine-tuned models like BERT4RE, ALBERT, and DistilBERT, achieving over 89% F1-score. A Flask app lets users input single or multiple reviews for classification, offering results in text or Excel format, helping developers analyze feedback efficiently.",
+        "An end-to-end NLP system that classifies app reviews using fine-tuned models like BERT4RE, ALBERT, and DistilBERT, achieving over 89% F1-score. A Flask-based backend and UI let users submit single or batched reviews for classification and export results to Excel, helping product teams analyze feedback efficiently.",
       technologies: [
-        "Pytorch",
+        "PyTorch",
         "Keras",
         "Hugging Face",
         "Flask",

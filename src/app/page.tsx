@@ -12,7 +12,21 @@ import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
+const CORE_SKILLS = new Set([
+  "TypeScript",
+  "Python",
+  "Retrieval-Augmented Generation (RAG)",
+  "Agent Orchestration",
+  "Node.js",
+  "FastAPI",
+  "LangChain",
+  "Docker"
+]);
+
 export default function Page() {
+  const coreSkills = DATA.skills.filter((skill) => CORE_SKILLS.has(skill));
+  const otherSkills = DATA.skills.filter((skill) => !CORE_SKILLS.has(skill));
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -110,13 +124,23 @@ export default function Page() {
       </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
-          {/* <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade> */}
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Core skills</h2>
+          </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
+            {coreSkills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge>{skill}</Badge>
+              </BlurFade>
+            ))}
+          </div>
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold mt-4">Other skills</h2>
+          </BlurFade>
+          <div className="flex flex-wrap gap-1">
+            {otherSkills.map((skill, id) => (
+              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge>{skill}</Badge>
               </BlurFade>
             ))}
           </div>
