@@ -5,6 +5,7 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { TechStackCloud } from "@/components/ui/tech_stack_cloud";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
@@ -40,7 +41,7 @@ export default function Page() {
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] md:text-lg"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
@@ -52,6 +53,9 @@ export default function Page() {
               </Avatar>
             </BlurFade>
           </div>
+        </div>
+        <div className="flex items-center justify-center w-full mt-6">
+          <Button>Book a Free Intro Call</Button>
         </div>
       </section>
       <section id="about">
@@ -84,29 +88,6 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
-              />
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-      <section id="education">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
-          </BlurFade>
-          {DATA.education.map((education, id) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
-              <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
               />
             </BlurFade>
           ))}
@@ -185,6 +166,29 @@ export default function Page() {
               </BlurFade>
             ))}
           </div>
+        </div>
+      </section>
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Education</h2>
+          </BlurFade>
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
         </div>
       </section>
       <section id="hackathons">
@@ -277,15 +281,9 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm on{" "}
-                <Link
-                  href={DATA.contact.social.LinkedIn.url}
-                  className="text-blue-500 hover:underline"
-                >
-                  LinkedIn
-                </Link>{" "}
-                and I&apos;ll respond whenever I can😊.
+                Shoot me a DM on LinkedIn or Book a free 30-minute call to discuss your AI challenges and see if my services might be a good fit for your needs.
               </p>
+              <Button>Book a Free Intro Call</Button>
             </div>
           </BlurFade>
         </div>

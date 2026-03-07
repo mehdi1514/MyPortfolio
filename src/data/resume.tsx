@@ -133,6 +133,32 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "AI News Aggregator (GenAI)",
+      href: "",
+      dates: "Feb 2026 - Feb 2026",
+      active: true,
+      description:
+        "An AI-driven news aggregation service that curates, summarizes and emails a daily digest of the latest AI news.",
+      technologies: [
+        "Python",
+        "Gemini API",
+        "Web Scraping (Beautiful Soup)",
+        "Docker",
+        "PostgreSQL",
+        "Github Actions"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/mehdi1514/My-AI-News-Aggregator",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "https://private-user-images.githubusercontent.com/26627849/559785774-b95e1efe-4df6-4f6f-ac35-846fad9fbc41.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzI5MDcwNDEsIm5iZiI6MTc3MjkwNjc0MSwicGF0aCI6Ii8yNjYyNzg0OS81NTk3ODU3NzQtYjk1ZTFlZmUtNGRmNi00ZjZmLWFjMzUtODQ2ZmFkOWZiYzQxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzA3VDE4MDU0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFhYWM3ZmU0N2VjOGU3MGFkY2ZjMTYwZjQ2ZDllYTczNDIwNmViNmU1NGQxZWEyNWVhNjlhNzRkZjA4NGIxOGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7OmyurL2PEUa1nIoXmK0EGAbeLqP8j3cDAFo4OsGN6w",
+      video:
+        "",
+    },
+    {
       title: "Scalable Real-Time Chat App",
       href: "",
       dates: "Oct 2024 - Dec 2024",
