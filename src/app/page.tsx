@@ -55,7 +55,9 @@ export default function Page() {
           </div>
         </div>
         <div className="flex items-center justify-center w-full mt-6">
-          <Button>Book a Free Intro Call</Button>
+          <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
+            <Button>Book a Free Intro Call</Button>
+          </Link>
         </div>
       </section>
       <section id="about">
@@ -283,7 +285,9 @@ export default function Page() {
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Shoot me a DM on LinkedIn or Book a free 30-minute call to discuss your AI challenges and see if my services might be a good fit for your needs.
               </p>
-              <Button>Book a Free Intro Call</Button>
+              <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
+                <Button>Book a Free Intro Call</Button>
+              </Link>
             </div>
           </BlurFade>
         </div>
