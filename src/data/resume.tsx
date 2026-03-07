@@ -11,37 +11,27 @@ export const DATA = {
     "I am an AI Engineer focused on architecting and building backends for AI agents and RAG systems. I turn demo pilots into production AI applications.",
   summary:
     "I build backend systems that make AI products work in production: RAG pipelines, AI agents, LLM integrations, and the APIs that connect them. At Alteam I shipped a semantic search feature with LangChain and PGVector that cut talent search time by 40% and improved match accuracy by 25%. My core stack is TypeScript, Node.js, Python, and FastAPI, with hands-on experience in RAG systems, agent orchestration, and vector databases - plus fullstack capability in React and Next.js.",
+  bookCallText:
+    "Book a Free Intro Call",
   avatarUrl: "/me1.jpeg",
   skills: [
     "Retrieval-Augmented Generation (RAG)",
-    "LangChain",
+    "Vector Databases",
     "Agent Orchestration",
+    "LangChain",
+    "LangGraph",
     "TypeScript",
     "Python",
     "Node.js",
     "FastAPI",
-    "Next.js",
-    "React.js",
     "PostgreSQL",
-    "PGVector",
+    "NoSQL",
+    "AWS",
+    "Docker",
+    "Next.js",
     "Kafka",
     "Redis",
-    "Docker",
-    "SQL",
-    "NoSQL",
-    "spaCy",
-    "PyTorch",
-    "Keras",
-    "Pandas",
-    "Numpy",
-    "Scikit-Learn",
-    "Flutter",
-    "Firebase",
-    "Java",
-    "Spring Boot",
-    "Angular",
-    "Dart",
-    "Vercel"
+    "Vercel",
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -133,9 +123,36 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Talent Sourcing Agent (RAG)",
+      href: "https://www.alteam.io",
+      dates: "Dec 2026 - Present",
+      active: true,
+      description:
+        "A single-agent RAG system that helps clients find the best talent from Alteam's database for their needs by using AI to understand their requirements and match them with the best candidates.",
+      technologies: [
+        "Typescript",
+        "Gemini API",
+        "PGVector",
+        "PostgreSQL",
+        "Langchain.js",
+        "Vercel",
+        "CI/CD"
+      ],
+      links: [
+        {
+          type: "Platform",
+          href: "https://www.alteam.io",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/alteam.png",
+      video:
+        "",
+    },
+    {
       title: "AI News Aggregator (GenAI)",
-      href: "",
-      dates: "Feb 2026 - Feb 2026",
+      href: "https://github.com/mehdi1514/My-AI-News-Aggregator",
+      dates: "Feb 2026",
       active: true,
       description:
         "An AI-driven news aggregation service that curates, summarizes and emails a daily digest of the latest AI news.",
@@ -154,13 +171,13 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "https://private-user-images.githubusercontent.com/26627849/559785774-b95e1efe-4df6-4f6f-ac35-846fad9fbc41.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NzI5MDcwNDEsIm5iZiI6MTc3MjkwNjc0MSwicGF0aCI6Ii8yNjYyNzg0OS81NTk3ODU3NzQtYjk1ZTFlZmUtNGRmNi00ZjZmLWFjMzUtODQ2ZmFkOWZiYzQxLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjAzMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYwMzA3VDE4MDU0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFhYWM3ZmU0N2VjOGU3MGFkY2ZjMTYwZjQ2ZDllYTczNDIwNmViNmU1NGQxZWEyNWVhNjlhNzRkZjA4NGIxOGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7OmyurL2PEUa1nIoXmK0EGAbeLqP8j3cDAFo4OsGN6w",
+      image: "/ai-news-aggregator-example.png",
       video:
         "",
     },
     {
       title: "Scalable Real-Time Chat App",
-      href: "",
+      href: "https://github.com/mehdi1514/Scalable-chat-app/",
       dates: "Oct 2024 - Dec 2024",
       active: true,
       description:
@@ -186,7 +203,7 @@ export const DATA = {
     },
     {
       title: "StudyLM - Create Study Notes with AI",
-      href: "",
+      href: "https://github.com/mehdi1514/StudyLM?tab=readme-ov-file",
       dates: "Sept 2024 - Oct 2024",
       active: true,
       description:
@@ -212,7 +229,7 @@ export const DATA = {
     },
     {
       title: "App Review Classification Using PLMs",
-      href: "",
+      href: "https://github.com/mehdi1514/AppReviewClassification",
       dates: "Feb 2024 - Sep 2024",
       active: true,
       description:
@@ -233,81 +250,6 @@ export const DATA = {
         },
       ],
       image: "/revclassify.png",
-      video:
-        "",
-    },
-    {
-      title: "Shrike",
-      href: "",
-      dates: "May 2020 - Jun 2020",
-      active: true,
-      description:
-        "A Skype clone developed using Flutter and Firebase, featuring one-to-one chat and video calling. The app ensures seamless communication with real-time updates, secure authentication, and efficient state management. Followed best coding practices for scalability and maintainability throughout the project.",
-      technologies: [
-        "Flutter",
-        "Firebase",
-        "AgoraRTC"
-      ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/mehdi1514/Shrike",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/shrike.png",
-      video: "",
-    },
-    {
-      title: "Todo List App",
-      href: "",
-      dates: "Sep 2023",
-      active: true,
-      description:
-        "A full-stack to-do list web app built with React.js and a Node.js backend, featuring CRUD operations and MongoDB for data storage. Users can add, edit, and delete tasks, with todos saved in the database for persistence. The application includes authentication and authorization using JWT tokens, ensuring secure access. It is responsive and offers a seamless user experience.",
-      technologies: [
-        "HTML & CSS",
-        "Javascript",
-        "React.js",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Vite",
-        "JWT"
-      ],
-      links: [
-        // {
-        //   type: "Website",
-        //   href: "https://mehdi-todo-list.netlify.app/",
-        //   icon: <Icons.globe className="size-3" />,
-        // },
-        {
-          type: "Source",
-          href: "https://github.com/mehdi1514/TodoList",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/todolistpostforlio.png",
-      video: "",
-    },
-    {
-      title: "14 Stars",
-      href: "",
-      dates: "April 2020 - Present",
-      active: true,
-      description:
-        "A religious app built with Flutter, featuring the Holy Qur'an in Arabic, with translation and transliteration. It includes supplications, Adhan timings, Qiblah direction, and audio recitations of Qur'an chapters and supplications. Has 10k+ downloads on Google Play Store.",
-      technologies: [
-        "Flutter"
-      ],
-      links: [
-        {
-          type: "Play Store",
-          href: "https://play.google.com/store/apps/details?id=com.zain.stars14&hl=en_GB",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/14_stars.webp",
       video:
         "",
     },

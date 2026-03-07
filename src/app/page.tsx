@@ -13,20 +13,7 @@ import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
-const CORE_SKILLS = new Set([
-  "TypeScript",
-  "Python",
-  "Retrieval-Augmented Generation (RAG)",
-  "Agent Orchestration",
-  "Node.js",
-  "FastAPI",
-  "LangChain",
-  "Docker"
-]);
-
 export default function Page() {
-  const coreSkills = DATA.skills.filter((skill) => CORE_SKILLS.has(skill));
-  const otherSkills = DATA.skills.filter((skill) => !CORE_SKILLS.has(skill));
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -56,7 +43,7 @@ export default function Page() {
         </div>
         <div className="flex items-center justify-center w-full mt-6">
           <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
-            <Button>Book a Free Intro Call</Button>
+            <Button>{DATA.bookCallText}</Button>
           </Link>
         </div>
       </section>
@@ -111,17 +98,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Core skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {coreSkills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold mt-4">Other skills</h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {otherSkills.map((skill, id) => (
+            {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
                 <Badge>{skill}</Badge>
               </BlurFade>
@@ -135,15 +112,13 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
+                  Recent Projects
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my latest work
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  web apps to complex mobile applications and AI models. Here are a few of my
-                  favorites.
+                <p className="text-muted-foreground md:text-lg">
+                  I build AI systems that actually ship. I specialize in developing RAG AI agents. My projects span full-stack AI deployment: from vector database and agent orchestration to API integration and production monitoring. Below are systems I have built end-to-end.
                 </p>
               </div>
             </div>
@@ -193,6 +168,43 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <section id="communities">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Communities
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Teaching Tech
+                </h2>
+                <p className="text-muted-foreground md:text-lg">
+                  During my time in VJTI, I was a part of two communities that were mainly focused on learning new skills and teaching others the same.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
+            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+              {DATA.communities.map((project, id) => (
+                <BlurFade
+                  key={project.title + project.dates}
+                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                >
+                  <HackathonCard
+                    title={project.title}
+                    description={project.description}
+                    location={project.location}
+                    dates={project.dates}
+                    image={project.image}
+                  />
+                </BlurFade>
+              ))}
+            </ul>
+          </BlurFade>
+        </div>
+      </section>
       <section id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
@@ -202,9 +214,9 @@ export default function Page() {
                   Hackathons
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  I like building things
+                  I love participating in Hacks
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground md:text-lg">
                   During my time in VJTI, I attended{" "}
                   {DATA.hackathons.length}+ hackathons. Students from Mumbai
                   would come together and build incredible things in 2-3
@@ -235,43 +247,6 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="communities">
-        <div className="space-y-12 w-full py-12">
-          <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  Communities
-                </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Upskilling and Teaching Tech
-                </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  During my time in VJTI, I was a part of two communities that were mainly focused on learning new skills and teaching others the same.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-              {DATA.communities.map((project, id) => (
-                <BlurFade
-                  key={project.title + project.dates}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.05}
-                >
-                  <HackathonCard
-                    title={project.title}
-                    description={project.description}
-                    location={project.location}
-                    dates={project.dates}
-                    image={project.image}
-                  />
-                </BlurFade>
-              ))}
-            </ul>
-          </BlurFade>
-        </div>
-      </section>
       <section id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -282,12 +257,14 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="mx-auto max-w-[500px] text-muted-foreground md:text-lg">
                 Shoot me a DM on LinkedIn or Book a free 30-minute call to discuss your AI challenges and see if my services might be a good fit for your needs.
               </p>
-              <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
-                <Button>Book a Free Intro Call</Button>
-              </Link>
+              <div className="mt-3">
+                <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
+                  <Button>{DATA.bookCallText}</Button>
+                </Link>
+              </div>
             </div>
           </BlurFade>
         </div>

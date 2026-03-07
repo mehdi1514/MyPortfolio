@@ -6,20 +6,20 @@ const slugs = [
   "javascript",
   "react",
   "langchain",
+  "langgraph",
   "fastapi",
-  "html5",
-  "css3",
   "nodedotjs",
   "express",
   "nextdotjs",
-  "prisma",
   "postgresql",
+  "prisma",
   "vercel",
   "docker",
   "github",
   "mongodb",
   "redis",
   "python",
+  "amazonwebservices"
 ];
 
 export function TechStackCloud() {
