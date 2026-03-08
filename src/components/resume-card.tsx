@@ -18,6 +18,7 @@ interface ResumeCardProps {
   badges?: readonly string[];
   period: string;
   description?: string;
+  expanded: boolean;
 }
 export const ResumeCard = ({
   logoUrl,
@@ -28,8 +29,9 @@ export const ResumeCard = ({
   badges,
   period,
   description,
+  expanded
 }: ResumeCardProps) => {
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  const [isExpanded, setIsExpanded] = React.useState(expanded || false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (description) {

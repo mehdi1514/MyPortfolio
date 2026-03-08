@@ -6,8 +6,16 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 import { TechStackCloud } from "@/components/ui/tech_stack_cloud";
 import { DATA } from "@/data/resume";
+import { BrainCircuit } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
@@ -41,11 +49,6 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
-        <div className="flex items-center justify-center w-full mt-6">
-          <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
-            <Button>{DATA.bookCallText}</Button>
-          </Link>
-        </div>
       </section>
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
@@ -56,6 +59,55 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
+      </section>
+      <section id="services">
+        <div className="space-y-8 w-full py-8">
+          <BlurFade delay={BLUR_FADE_DELAY * 15}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Services
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  What I offer
+                </h2>
+                <p className="text-muted-foreground md:text-lg">
+                  I offer specialized AI engineering services to help you build and scale your AI applications.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.services.map((service, id) => (
+              <BlurFade
+                key={service.title}
+                delay={BLUR_FADE_DELAY * 16 + id * 0.05}
+              >
+                <Card className="flex flex-col h-full border hover:shadow-lg transition-all duration-300 ease-out p-2">
+                  <CardHeader className="flex flex-col gap-4">
+                    {service.icon}
+                    <CardTitle className="text-base">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-pretty font-sans text-sm text-muted-foreground">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </BlurFade>
+            ))}
+          </div>
+          <div className="flex items-center justify-center w-full">
+            <BlurFade delay={BLUR_FADE_DELAY}>
+              <div className="flex flex-col items-center gap-4 justify-center p-4 rounded-lg">
+                <p className="text-base font-medium">Want to discusss if my services might be a good fit for your needs?</p>
+              <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">
+                <Button>{DATA.bookCallText}</Button>
+              </Link>
+              </div>
+            </BlurFade>
+          </div>
+        </div>
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
@@ -77,6 +129,7 @@ export default function Page() {
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
                 description={work.description}
+                expanded={id === 0 ? true : false}
               />
             </BlurFade>
           ))}
@@ -163,6 +216,7 @@ export default function Page() {
                 title={education.school}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
+                expanded={false}
               />
             </BlurFade>
           ))}
@@ -258,7 +312,7 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[500px] text-muted-foreground md:text-lg">
-                Shoot me a DM on LinkedIn or Book a free 30-minute call to discuss your AI challenges and see if my services might be a good fit for your needs.
+                Book a free 30-minute call to discuss your AI challenges and see if my services might be a good fit for your needs.
               </p>
               <div className="mt-3">
                 <Link href="https://cal.com/mehdi-patel/introductory-call" target="_blank">

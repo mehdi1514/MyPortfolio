@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { BrainCircuit, HomeIcon, NotebookIcon, ShieldCheck, SquareActivity, Workflow } from "lucide-react";
 
 export const DATA = {
   name: "Mehdi Patel",
@@ -8,7 +8,7 @@ export const DATA = {
   location: "Manchester, England, United Kingdom",
   locationLink: "https://www.google.com/maps/place/Manchester/",
   description:
-    "I am an AI Engineer focused on architecting and building backends for AI agents and RAG systems. I turn demo pilots into production AI applications.",
+    "I build production-ready AI agents and RAG systems. If your AI pilot never made it to production, that's exactly what I fix.",
   summary:
     "I build backend systems that make AI products work in production: RAG pipelines, AI agents, LLM integrations, and the APIs that connect them. At Alteam I shipped a semantic search feature with LangChain and PGVector that cut talent search time by 40% and improved match accuracy by 25%. My core stack is TypeScript, Node.js, Python, and FastAPI, with hands-on experience in RAG systems, agent orchestration, and vector databases - plus fullstack capability in React and Next.js.",
   bookCallText:
@@ -64,6 +64,28 @@ export const DATA = {
       },
     },
   },
+  services: [
+    {
+      title: "RAG & Agent Development",
+      description: "Design and build retrieval pipelines using PGVector and LangChain, including multi-index search, tool use, and agent routing. Connected to your Postgres database with proper access control and audit logging.",
+      icon: <BrainCircuit size={45} />
+    },
+    {
+      title: "AI Feature Integration",
+      description: "Full-stack implementation of AI features into your product using React/Next.js on the frontend and Node/Express on the backend. Deployed on cloud platforms like Vercel and AWS, with CI/CD pipelines setup.",
+      icon: <Workflow size={45} />
+    },
+    {
+      title: "AI Observability Setup",
+      description: "Instrumentation for cost tracking, latency monitoring, and prompt/config CI/CD so your AI system doesn't become a black box in production.",
+      icon: <SquareActivity size={45} />
+    },
+    {
+      title: "Security & Permissions for AI",
+      description: "Ensuring your AI only accesses data a user is authorised to see. Authentication, row-level access, structured logging, and role-based access.",
+      icon: <ShieldCheck size={45} />
+    },
+  ],
 
   work: [
     {
