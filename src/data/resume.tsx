@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { BrainCircuit, HomeIcon, NotebookIcon, ShieldCheck, SquareActivity, Workflow } from "lucide-react";
+import { BrainCircuit, HomeIcon, NotebookIcon, ShieldCheck, SquareActivity, Workflow, BriefcaseIcon } from "lucide-react";
 
 export const DATA = {
   name: "Mehdi Patel",
@@ -10,7 +10,7 @@ export const DATA = {
   description:
     "I build production-ready AI agents and RAG systems. If your AI pilot never made it to production, that's exactly what I fix.",
   summary:
-    "I build backend systems that make AI products work in production: RAG pipelines, AI agents, LLM integrations, and the APIs that connect them. At Alteam I shipped a semantic search feature with LangChain and PGVector that cut talent search time by 40% and improved match accuracy by 25%. My core stack is TypeScript, Node.js, Python, and FastAPI, with hands-on experience in RAG systems, agent orchestration, and vector databases - plus fullstack capability in React and Next.js.",
+    "I build backend systems that make AI products work in production: RAG pipelines, AI agents, LLM integrations, and the APIs that connect them. At Alteam I shipped a semantic search feature with LangChain and PGVector that cut talent search time by ~40% and saved long-term costs by ~35%. My core stack is TypeScript, Node.js, Python, and FastAPI, with hands-on experience in RAG systems, agent orchestration, and vector databases - plus fullstack capability in React and Next.js.",
   bookCallText:
     "Book a Free Intro Call",
   avatarUrl: "/me1.jpeg",
@@ -36,6 +36,7 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    { href: "/case-studies", icon: BriefcaseIcon, label: "Case Studies" },
   ],
   contact: {
     email: "mehdi.patel@gmail.com",
@@ -98,7 +99,7 @@ export const DATA = {
       start: "Dec 2024",
       end: "Present",
       description:
-        "Engineered an AI-powered semantic search feature with LangChain, PostgreSQL, and PGVector that reduced talent search time by 40% and improved talent match accuracy by 25%. Developed a RAG system and backend APIs for talent matching, and shipped production-ready features across React, Next.js, Node.js, and Hono within a robust CI/CD pipeline.",
+        "Engineered an AI-powered talent sourcing agent with LangChain, PostgreSQL, and PGVector that reduced talent search time by ~40% and reduced long-term cost savings by ~35%. Developed a RAG system and backend APIs for talent matching, and shipped production-ready features across React, Next.js, Node.js, and Hono within a robust CI/CD pipeline.",
     },
     {
       company: "SAP Labs India",

@@ -14,14 +14,16 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { TechStackCloud } from "@/components/ui/tech_stack_cloud";
+import { getCaseStudies } from "@/data/case-studies";
 import { DATA } from "@/data/resume";
-import { BrainCircuit } from "lucide-react";
+import { BrainCircuit, ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
-export default function Page() {
+export default async function Page() {
+  const caseStudies = await getCaseStudies();
 
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
@@ -156,6 +158,63 @@ export default function Page() {
                 <Badge>{skill}</Badge>
               </BlurFade>
             ))}
+          </div>
+        </div>
+      </section>
+      <section id="case-studies">
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  Case Studies
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Deep Dives
+                </h2>
+                <p className="text-muted-foreground md:text-lg">
+                  Detailed explorations of complex problems and my architectural solutions.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="flex flex-col gap-3 max-w-[800px] mx-auto">
+            {caseStudies
+              .sort((a, b) => {
+                if (
+                  a.metadata.publishedAt &&
+                  b.metadata.publishedAt &&
+                  new Date(a.metadata.publishedAt) >
+                    new Date(b.metadata.publishedAt)
+                ) {
+                  return -1;
+                }
+                return 1;
+              })
+              .slice(0, 3)
+              .map((study, id) => (
+                <BlurFade
+                  key={study.slug}
+                  delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+                >
+                  <Link
+                    className="group flex flex-col space-y-1 mb-4"
+                    href={`/case-studies/${study.slug}`}
+                  >
+                    <div className="w-full flex flex-col">
+                      <div className="flex flex-row justify-between items-center">
+                        <p className="tracking-tight font-medium text-lg">
+                          {study.metadata.title}
+                        </p>
+                        <ChevronRightIcon className="size-4 -translate-x-1 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        {study.metadata.headline}
+                      </p>
+                    </div>
+                  </Link>
+                </BlurFade>
+              ))}
           </div>
         </div>
       </section>

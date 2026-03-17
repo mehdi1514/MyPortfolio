@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import ThemeFlickeringGrid from "@/components/theme-flickering-grid";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
@@ -69,7 +70,20 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
-            {children}
+            <div className="absolute inset-0 top-0 left-0 right-0 h-[100px] overflow-hidden z-0">
+              <ThemeFlickeringGrid
+                className="h-full w-full"
+                squareSize={4}
+                gridGap={2}
+                style={{
+                  maskImage: "linear-gradient(to bottom, black, transparent)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
+                }}
+              />
+            </div>
+            <div className="relative z-10 max-w-2xl mx-auto max-sm:pt-12">
+              {children}
+            </div>
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>

@@ -1,0 +1,63 @@
+---
+title: "Automating Talent Screening with AI"
+headline: "Cutting candidate screening time by ~60% with an AI agent"
+summary: "The client's team was spending up to an hour manually reading through 10–50 CVs per batch, assessing candidate fit against a job brief, and then hand-entering the best matches into their database. I built an AI agent that does all of this in ~10 minutes — an up to ~60% reduction in screening time — and lets reviewers add shortlisted talent to the database in one click, directly from the chat interface."
+publishedAt: "2026-02-15"
+image: ""
+---
+
+**Client:** a talent sourcing company that matches professionals with client projects.
+
+**Role:** Sole developer, end-to-end.
+
+---
+
+## TL;DR
+
+The client's team was spending up to an hour manually reading through 10–50 CVs per batch, assessing candidate fit against a job brief, and then hand-entering the best matches into their database. I built an AI agent that does all of this in ~10 minutes — an up to ~60% reduction in screening time — and lets reviewers add shortlisted talent to the database in one click, directly from the chat interface.
+
+---
+
+## Challenge
+
+Every time a new project brief came in, someone on the client's team had to open each CV, read it, mentally compare it to the job spec, and manually enter the best fits into their Postgres database. With batches of 10–50 CVs, this consumed between 20 minutes and a full hour per intake — before any database work was even done. It was inconsistent, time-consuming, and not scalable as their pipeline grew.
+
+## Our Approach
+
+**AI Agent Design & LLM Orchestration**
+
+The core of the solution is a conversational AI agent built with LangChain.js in TypeScript. The agent works in two modes: a structured analysis mode (triggered when CVs and a job spec are uploaded) and an open-ended chat mode (for follow-up questions about candidates). Key decisions included using Mistral Small as the primary LLM for its strong instruction-following and cost efficiency, with Gemini Flash 2.0 as a fallback to ensure uninterrupted service. Custom LangChain tools were built to force structured JSON output from the agent, enabling the frontend to render analysis directly into UI components without any post-processing. System prompts were carefully engineered so the agent produces per-candidate bullet-point reasoning tied specifically to the language of the job description — not generic summaries.
+
+**Document Intelligence**
+
+Both CVs and job spec documents were processed using the Mistral OCR API, which extracts clean, structured text from PDFs regardless of formatting complexity. This removed the need for brittle document parsers and ensured the agent always received readable input.
+
+**Backend Integration**
+
+A new endpoint was added to the client's existing Hono (Node.js) backend, handling document ingestion, agent initialisation, response streaming, and database writes — all designed to be minimally invasive to the existing production codebase.
+
+**Frontend Interface**
+
+The Next.js frontend (built to the client's designer specs) includes a real-time chat interface, structured talent analysis cards with per-candidate fit reasoning, and a selection panel that lets reviewers check-select approved candidates and write them directly to Postgres in one click.
+
+## Results & Impact
+
+Reviewing a batch of 10–50 CVs dropped from up to 1 hour down to approximately 10 minutes — an up to ~60% reduction in screening time. The agent handles batches of 50 with the same speed as smaller ones, making the process genuinely scalable. Manual database entry was eliminated entirely; it's now a single click from within the same interface as the analysis, removing context-switching and the risk of transcription errors. Reviewers also get more consistent, higher-quality assessments — each candidate's fit is grounded in the specific language of the job description rather than a subjective read-through.
+
+## Visual Assets
+
+![Architecture Diagram](/case-study-2-architecture.png)
+*Architecture of the Talent Screening Agent*
+
+## Tech Stack
+
+-   **Language / Runtime:** TypeScript, Node.js
+-   **AI / Agent Framework:** LangChain.js
+-   **LLM:** Mistral Small Latest (primary), Gemini Flash 3 (fallback)
+-   **OCR:** Mistral OCR API
+-   **Embeddings:** Mistral Embeddings API
+-   **Vector Database:** PostgreSQL + PGVector
+-   **Search Strategy:** Hybrid search (semantic similarity + metadata filtering)
+-   **Backend Framework:** Hono (Node.js)
+-   **Frontend:** Next.js (React)
+-   **Database & Hosting:** PostgreSQL on Amazon RDS
