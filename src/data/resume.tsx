@@ -157,7 +157,8 @@ export const DATA = {
         "Gemini API",
         "PGVector",
         "PostgreSQL",
-        "Langchain.js",
+        "LangChain",
+        "LangGraph",
         "Vercel",
         "CI/CD"
       ],
