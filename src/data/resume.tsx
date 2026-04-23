@@ -174,6 +174,32 @@ export const DATA = {
         "",
     },
     {
+      title: "Multi-Agent Research & Report Writer with Full Observability",
+      href: "https://github.com/mehdi1514/research-agent-with-langfuse-tracing",
+      dates: "Apr 2026",
+      active: true,
+      description:
+        "A multi-agent system built with LangGraph that researches any topic via web search, synthesizes findings into structured sections, runs a quality-check critic loop, and assembles a polished Markdown report. It is built with full Langfuse observability for cost, latency, and prompt versioning.",
+      technologies: [
+        "Python",
+        "Langfuse",
+        "LangChain",
+        "LangGraph",
+        "Gemini API",
+        "Tavily API"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/mehdi1514/research-agent-with-langfuse-tracing",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/research_agent_architecture.png",
+      video:
+        "",
+    },
+    {
       title: "AI News Aggregator (GenAI)",
       href: "https://github.com/mehdi1514/My-AI-News-Aggregator",
       dates: "Feb 2026",
